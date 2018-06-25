@@ -61,7 +61,7 @@ public class AddActivity extends AppCompatActivity {
 
         String datetime = saveYear + "-" + saveMonth + "-" + saveDay;
         String name = edInfo.getSelectedItem().toString();
-        String money = edAmount.getText().toString().trim();
+        String money = "$" + edAmount.getText().toString().trim();
         if (datetime.equals("0-0-0")||name.equals("")||money.equals("")) {
             Toast.makeText(this, "資料未齊全", Toast.LENGTH_SHORT).show();
             return;

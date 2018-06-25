@@ -98,7 +98,7 @@
             android:layout_height="11dp"
             android:layout_weight="1"
             android:onClick="add"
-            android:text="Submit"
+            android:text="加入帳本"
             android:textSize="20dp" />
 
     </LinearLayout>

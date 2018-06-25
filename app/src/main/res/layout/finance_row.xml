@@ -18,28 +18,29 @@
         android:id="@+id/item_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_toRightOf="@id/item_id"
-        android:text="隨身碟"
+        android:layout_below="@+id/item_id"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/item_id"
+        android:text="資訊"
         android:textColor="#000000"
-        android:textSize="20sp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/item_money"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/item_name"
-        android:layout_alignLeft="@id/item_name"
-        android:textSize="18sp"
-        android:text="$60" />
+        android:layout_alignBottom="@+id/item_name"
+        android:layout_toStartOf="@+id/item_datetime"
+        android:text="金額"
+        android:textColor="#000000"
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/item_datetime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="2015/4/12"
-        android:layout_below="@+id/item_money"
-        android:layout_alignLeft="@+id/item_money"
-        android:layout_alignStart="@+id/item_money" />
+        android:layout_alignBottom="@+id/item_money"
+        android:layout_alignParentEnd="true"
+        android:text="yyyy/mm/dd"
+        android:textSize="18sp" />
 </RelativeLayout>
