@@ -80,14 +80,14 @@
                 android:gravity="center"
                 android:text="說明" />
 
-            <EditText
+            <Spinner
                 android:id="@+id/ch_info"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="384dp"
+                android:layout_height="51dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:gravity="center"
-                android:inputType="text" />
+                android:entries="@array/moneymod"
+                android:gravity="center"/>
 
         </LinearLayout>
 

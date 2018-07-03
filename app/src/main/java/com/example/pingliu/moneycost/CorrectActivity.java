@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,7 +16,7 @@ import java.util.Calendar;
 public class CorrectActivity extends AppCompatActivity {
     private int id;
     private TextView chDate;
-    private EditText chInfo;
+    private Spinner chInfo;
     private EditText chAmount;
     private int saveYear, saveMonth, saveDay;
     private boolean dateClick;
@@ -30,7 +31,7 @@ public class CorrectActivity extends AppCompatActivity {
     }
 
     private void findViews() {
-        chInfo = (EditText) findViewById(R.id.ch_info);
+        chInfo = (Spinner) findViewById(R.id.ch_info);
         chAmount = (EditText) findViewById(R.id.ch_amount);
         chDate = (TextView) findViewById(R.id.ch_date);
         chDate.setOnClickListener(new View.OnClickListener() {
@@ -62,7 +63,7 @@ public class CorrectActivity extends AppCompatActivity {
     public void correct(View v) {
 
         String datetime = saveYear + "-" + saveMonth + "-" + saveDay;
-        String name = chInfo.getText().toString();
+        String name = chInfo.getSelectedItem().toString();
         String money = chAmount.getText().toString().trim();
         if (datetime.equals("0-0-0")||name.equals("")||money.equals("")) {
             Toast.makeText(this, "資料未齊全", Toast.LENGTH_SHORT).show();
